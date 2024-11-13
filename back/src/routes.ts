@@ -26,10 +26,20 @@ router.get("/getName", async (req, res) => {
       name = nameWhile
     }
   }
-
-  await createNewPlayer(name)
   
   res.json({name})
+})
+
+router.post("/genPlayer", async (req, res) => {
+  const nick = req.query.nick
+  
+  try {
+    if(nick) {
+      await createNewPlayer(String(nick))
+    }
+  } catch(err) {
+    res.status(400).send("Não foi possivel criar o jogador")
+  }
 })
 
 router.put("/updateUser", async (req, res) => {

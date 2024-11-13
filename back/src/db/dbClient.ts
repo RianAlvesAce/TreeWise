@@ -8,7 +8,6 @@ export const createNewPlayer = async (userName: string) => {
       nick: userName,
     }
   })
-  console.log(newUser)
 }
 
 export const searchPlayer = async (userNick: string) => {
