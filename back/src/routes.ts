@@ -53,6 +53,7 @@ router.get("/getAllPlayers", async (req, res) => {
 })
 
 router.get("/front", (req, res) => {
+  console.log(__dirname)
   res.sendFile(path.join(__dirname, "..","..","front","TreeWise","dist","index.html"))
 })
 
