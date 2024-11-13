@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useState } from 'react'
 import { getName } from '../services/APIservice'
 
 export const First = () => {
