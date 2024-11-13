@@ -1,6 +1,7 @@
 import express from "express"
 import ChosenNameByFile from "./utils/ChosenNameByFile"
 import { createNewPlayer, getAll, searchPlayer, updatePlayer } from "./db/dbClient"
+import path from "path"
 const router = express.Router()
 
 router.get("/getName", async (req, res) => {
@@ -49,6 +50,10 @@ router.get("/getAllPlayers", async (req, res) => {
 
   res.json(await getAll())
 
+})
+
+router.get("/front", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../front/TreeWise/dist/index.html"))
 })
 
 export default router
