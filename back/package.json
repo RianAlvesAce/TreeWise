@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tsx watch src/main.ts",
     "generate": "prisma generate --schema=./src/db/schema.prisma",
-    "prod": "npm run dev && npm run generate"
+    "prod": "npm run generate && npm run dev"
   },
   "author": "",
   "license": "ISC",
