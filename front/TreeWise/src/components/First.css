@@ -1,0 +1,16 @@
+.nickArea {
+  background: linear-gradient(90deg, #11114E, #97D5B1, #fff);
+  background-size: 300% 100%;
+  animation: search 1s infinite alternate linear;
+  width: 100px;
+  height: 25px;
+}
+
+@keyframes search {
+  0% {
+    background-position: 0% 50%; /* Posição inicial */
+  }
+  100% {
+    background-position: 100% 50%; /* Posição final */
+  }
+}
